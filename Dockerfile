@@ -12,7 +12,6 @@ RUN apt-get install sysvinit systemd- --yes
 RUN apt-get install less sudo screen python curl openssh-server wget vim --yes --force-yes
 
 RUN echo 'root:vagrant' | chpasswd
-
 RUN mkdir /home/vagrant
 RUN groupadd -r vagrant -g $uid && \
 useradd -u $uid -r -g vagrant -d /home/vagrant -s /bin/bash -c "Docker image user" vagrant && \
